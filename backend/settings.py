@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-s@(u+@98po^40@@ybh259pv*o13nd2sw+f3_-%+^v^y0&+k*m4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -62,8 +62,11 @@ REST_FRAMEWORK = {
         'accounts.tokenauthentication.JWTAuthentication'
     ]
 }
-CORS_ALLOW_ALL_ORIGINS = True
-
+CORS_ALLOWED_ORIGINS = [
+    
+    "http://localhost:3000",
+    "http://localhost:5173"
+]
 SECURE_SSL_REDIRECT = False
 
 
