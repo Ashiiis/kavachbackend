@@ -1,16 +1,16 @@
 {
-    "builds": [{
+    "b": [{
         "src": "backend/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     }],
-    "routes": [
+    "ro": [
         {
             "src": "/(.*)",
             "dest": "backend/wsgi.py"
         }
     ],
-    "env": {
+    "e": {
         "MY_ENV_VAR": "value",
         "ANOTHER_ENV_VAR": "another_value"
     }
